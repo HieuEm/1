@@ -555,11 +555,11 @@ function fetchStudentGrades(studentIDs) {
 
         let tableHTML = `
             <div class="student-info">
-                <h4>Kỳ Học: Kỳ ${semester}</h4>
-                ${studentsInSemester.map(({ studentID }) => `<p  padding: 5px; border-radius: 5px; display: block; max-width: 130px; margin-bottom: 5px;">Sinh Viên: ${studentID}</p>`).join("")}
+                <h4>Semeter: Kỳ ${semester}</h4>
+                ${studentsInSemester.map(({ studentID }) => `<p  padding: 5px; border-radius: 5px; display: block; max-width: 130px; margin-bottom: 5px;">studentID: ${studentID}</p>`).join("")}
                 <table style="border-collapse: collapse; width: 100%; border: 2px solid black;">
                     <tr style="border: 2px solid black;">
-                        <th style="text-align: center; padding: 10px; border: 2px solid black;">Sinh Viên</th>
+                        <th style="text-align: center; padding: 10px; border: 2px solid black;">studentID</th>
                         ${studentsInSemester[0].subjects.map(subject => `<th style="text-align: center; padding: 10px; border: 2px solid black;">${subject}</th>`).join("")}
                     </tr>
         `;
